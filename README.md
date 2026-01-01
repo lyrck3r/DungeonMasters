@@ -16,7 +16,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- Java 11 or later
+- Java 17 or later
 - Git
 - Optional: Maven or Gradle (if the project uses a build tool)
 
