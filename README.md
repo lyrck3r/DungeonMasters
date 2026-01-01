@@ -42,7 +42,7 @@ java -jar build/libs/artifact-name.jar
 If there is no build tool, compile and run directly:
 
 ```bash
-# compile all Java sources in src/ and place class files in out/
+# compile all main sources in src/ and place class files in out/
 javac -d out $(find src -name "*.java")
 # run main class (replace com.example.Main with your project's main class)
 java -cp out com.example.Main
