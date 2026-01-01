@@ -58,8 +58,6 @@ java -cp out com.example.Main
 
 - src/ - Java source code
 - tests/ - Unit test
-- docs/ - design and user docs
-- build/ - build artifacts
 
 Adjust these to match the repository's actual layout.
 
