@@ -73,6 +73,6 @@ This project does not yet include a license. If you want to make it open source,
 
 ## Contact
 
- Developer: Ashtu11
+ Team Lead, Developer: Ashtu11
 
- Documenter: lyrck3r
+ Developer, Designer, Documenter: lyrck3r
