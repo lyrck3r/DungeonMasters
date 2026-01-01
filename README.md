@@ -57,7 +57,7 @@ java -cp out com.example.Main
 ## Project structure (suggested)
 
 - src/ - Java source code
-- data/ - sample data or database files
+- tests/ - Unit test
 - docs/ - design and user docs
 - build/ - build artifacts
 
