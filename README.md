@@ -1,97 +1,76 @@
-# BudgetMaster — Expenses Calculator (JavaScript)
+# DungeonMasters — Java Expense Calculator
 
-Каленюк Анна - Team Lead, Developer
-Марухін Владислав - Developer, Documenter, Designer
-
-> BudgetMaster is a JavaScript-based Expenses Calculator to quickly record, categorize, and analyze personal or small-team spending. This README is tailored for a JS implementation (Node.js backend and optional JS frontend).
+DungeonMasters is a Java-based expense calculator and personal finance helper that lets you record expenses, categorize spending, set budgets, and generate simple reports. This repository contains the code and resources for the project.
 
 ## Features
-- Add, edit, and delete expenses
-- Categories, tags, merchants, payment methods
-- Recurring expenses and budget targets
-- Dashboard: totals, by-category breakdown, period comparisons
-- CSV / JSON import & export
-- Optional multi-currency support
-- Simple authentication (JWT) and per-user data
-- Responsive UI (if frontend included)
 
-## Tech stack
-- javaScript
+- Add, edit, and remove expense entries
+- Categorize expenses (e.g., Food, Transport, Rent, Entertainment)
+- Track budgets and warn when a category exceeds budget
+- Generate monthly/weekly summary reports
+- CSV import/export for easy data interchange
+
+## Getting started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Java 11 or later
+- Git
+- Optional: Maven or Gradle (if the project uses a build tool)
+
+### Build (examples)
+
+If the project uses Maven:
+
+```bash
+# from repository root
+mvn clean package
+# run the generated JAR (replace artifact-name.jar with actual file)
+java -jar target/artifact-name.jar
+```
+
+If the project uses Gradle:
+
+```bash
+# with Gradle wrapper
+./gradlew build
+java -jar build/libs/artifact-name.jar
+```
+
+If there is no build tool, compile and run directly:
+
+```bash
+# compile all Java sources in src/ and place class files in out/
+javac -d out $(find src -name "*.java")
+# run main class (replace com.example.Main with your project's main class)
+java -cp out com.example.Main
+```
+
+## Usage
+
+- Launch the application and follow CLI or GUI prompts (depending on implementation).
+- Use the import/export functions to move data between instances.
+- Create budgets per category and check reports to monitor spending.
 
 ## Project structure (suggested)
-A simple mono-repo layout:
-- /server — Node.js API (Express)
-- /client — Web frontend (React)
-- /scripts — deployment / helper scripts
 
-## API & Usage
-Example HTTP endpoints (adjust to your implementation):
+- src/ - Java source code
+- data/ - sample data or database files
+- docs/ - design and user docs
+- build/ - build artifacts
 
-- Auth
-  - POST /api/auth/register — register a user
-  - POST /api/auth/login — authenticate, returns JWT
+Adjust these to match the repository's actual layout.
 
-- Expenses
-  - GET /api/expenses?from=2025-01-01&to=2025-12-31 — list expenses
-  - POST /api/expenses — create expense
-  - GET /api/expenses/:id — get expense
-  - PUT /api/expenses/:id — update expense
-  - DELETE /api/expenses/:id — delete expense
+## Contributing
 
-- Budgets & Reports
-  - GET /api/reports/summary?period=month
-  - POST /api/budgets — create budget
+Contributions are welcome. Please open issues for bugs or feature requests and create pull requests for proposed changes. Include tests and documentation for significant changes.
 
-Example: create expense (curl)
-```bash
-curl -X POST http://localhost:4000/api/expenses \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <JWT>" \
-  -d '{
-    "date": "2025-12-01",
-    "amount": 23.50,
-    "currency": "USD",
-    "category": "Food",
-    "merchant": "Corner Cafe",
-    "notes": "Lunch with client",
-    "payment_method": "Credit Card",
-    "tags": ["business", "lunch"],
-    "recurring": false
-  }'
-```
+## License
 
-## Quick example expense JSON
-```json
-{
-  "id": "e8f1b6a2",
-  "date": "2025-12-01",
-  "amount": 23.5,
-  "currency": "USD",
-  "category": "Food",
-  "merchant": "Corner Cafe",
-  "notes": "Lunch with client",
-  "payment_method": "Credit Card",
-  "tags": ["business", "lunch"],
-  "recurring": false
-}
-```
+This project does not yet include a license. If you want to make it open source, consider adding a license such as MIT, Apache-2.0, or GPL-3.0. Add a LICENSE file to the repository.
 
-## Import / Export
-- Export CSV: date, amount, currency, category, merchant, notes, tags, payment_method
-- Import CSV: map headers to fields; missing categories become "Uncategorized"
+## Contact
 
-## Deployment
-Common JS deployment targets:
-- Backend: Heroku, Render, Railway, DigitalOcean App Platform
-- Frontend: Vercel, Netlify, or serve static build from the server
-- Database: Heroku Postgres, Railway Postgres, or managed Postgres
-- Use environment variables for secrets and DB URLs
-
-## Roadmap
-- [ ] User accounts & sharing budgets
-- [ ] Bank CSV import / auto-categorization
-- [ ] Mobile-friendly PWA or native app
-- [ ] Automated exchange rate updates
-- [ ] Advanced analytics & forecasting
-
- 
+Maintainer: lyrck3r
