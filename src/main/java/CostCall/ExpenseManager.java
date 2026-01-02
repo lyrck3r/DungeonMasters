@@ -1,14 +1,16 @@
 package CostCall;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDateTime;
 
 public class ExpenseManager {
     private List<Expense> expenses = new ArrayList<>();
 
     public void addExpense(String name, double amount, Category category) {
-        expenses.add(new Expense(name, amount, category, LocalDate.now()));
+        expenses.add(new Expense(name, amount, category, LocalDateTime.now()));
     }
 
     public void showAllExpenses() {

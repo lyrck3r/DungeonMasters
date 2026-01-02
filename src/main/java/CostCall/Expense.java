@@ -1,18 +1,19 @@
 package CostCall;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Expense {
     private String name;
     private double amount;
     private Category category;
-    private LocalDate date;
+    private LocalDateTime dateTime;
 
-    public Expense(String name, double amount, Category category, LocalDate date) {
+    public Expense(String name, double amount, Category category, LocalDateTime dateTime) {
         this.name = name;
         this.amount = amount;
         this.category = category;
-        this.date = date;
+        this.dateTime = dateTime;
     }
 
     public double getAmount() {
@@ -23,11 +24,18 @@ public class Expense {
         return category;
     }
 
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
     @Override
     public String toString() {
+        DateTimeFormatter formatter =
+                DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+
         return "Назва: " + name +
                 ", Сума: " + amount + " грн" +
                 ", Категорія: " + category +
-                ", Дата: " + date;
+                ", Дата і час: " + dateTime.format(formatter);
     }
 }
