@@ -1,76 +1,30 @@
-# DungeonMasters — Java Expense Calculator
+# DungeonMasters - BudgetMaster (Калькулятор витрат)
 
-DungeonMasters is a Java-based expense calculator and personal finance helper that lets you record expenses, categorize spending, set budgets, and generate simple reports. This repository contains the code and resources for the project.
+#### Team Lead, Developer - Ashuu11
+#### Developer, Designer, Documenter - lyrck3r
 
-## Features
+## Опис проєкту
+📌
+### BudgetMaster - це легкий в використанні калькулятор витрат,який дозволяє користувачам робити наступні дії:
 
-- Add, edit, and remove expense entries
-- Categorize expenses (e.g., Food, Transport, Rent, Entertainment)
-- Track budgets and warn when a category exceeds budget
-- Generate monthly/weekly summary reports
-- CSV import/export for easy data interchange
+#### -додавати категорії, назви і дату витрати;
+#### -можливість видаля витрати;
+#### -розрахунок суми витрат по категоріям і загально;
+#### -переглядати всі витрати.
 
-## Getting started
+### Вимоги для запуску проєкту:
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+#### Java 17 або новіша
+#### Операційна система: Windows|MacOS|Linux
 
-### Prerequisites
+### Як запустити проєкт:
 
-- Java 17 or later
-- Git
-- Optional: Maven or Gradle (if the project uses a build tool)
+#### Склонуйте репозиторій: (https://github.com/lyrck3r/DungeonMasters.git)
+#### Відкриваємо IDEA і відкриваємо проєкт
+#### В "main" нажимаємо play і все працює
 
-### Build (examples)
+### Тестування
 
-If the project uses Maven:
-
-```bash
-# from repository root
-mvn clean package
-# run the generated JAR (replace artifact-name.jar with actual file)
-java -jar target/artifact-name.jar
-```
-
-If the project uses Gradle:
-
-```bash
-# with Gradle wrapper
-./gradlew build
-java -jar build/libs/artifact-name.jar
-```
-
-If there is no build tool, compile and run directly:
-
-```bash
-# compile all main sources in src/ and place class files in out/
-javac -d out $(find src -name "*.java")
-# run main class (replace com.example.Main with your project's main class)
-java -cp out com.example.Main
-```
-
-## Usage
-
-- Launch the application and follow CLI or GUI prompts (depending on implementation).
-- Use the import/export functions to move data between instances.
-- Create budgets per category and check reports to monitor spending.
-
-## Project structure (suggested)
-
-- src/ - Java source code
-- tests/ - Unit test
-
-Adjust these to match the repository's actual layout.
-
-## Contributing
-
-Contributions are welcome. Please open issues for bugs or feature requests and create pull requests for proposed changes. Include tests and documentation for significant changes.
-
-## License
-
-This project does not yet include a license. If you want to make it open source, consider adding a license such as MIT, Apache-2.0, or GPL-3.0. Add a LICENSE file to the repository.
-
-## Contact
-
- Team Lead, Developer: Ashtu11
-
- Developer, Designer, Documenter: lyrck3r
+#### В папці "src" відкриваємо папку "tests->java"
+#### В ExpenseManagerTest натиснути на перший "Test"
+#### Натиснути "JUnit 6" і встановити його
